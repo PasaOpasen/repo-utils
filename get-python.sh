@@ -29,5 +29,5 @@ then
 fi
 
 
-echo -n $(realpath $(which $PYTHON))
+echo -n $(which $PYTHON)
 
