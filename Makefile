@@ -21,8 +21,10 @@ pypi-package: wheel wheel-push  ##@PyPI wheel build + push
 tag:          ##@Repo create and push tag from version.txt
 	bash tag-version.sh
 
-pypi-release: ##@Repo perform several actions for PyPI package release and repo update
-	bash increase-version.sh 
-	make pypi-package
+commit-v:     ##@Repo commit the current state according to version.txt file
 	bash commit-version.sh
-	make tag
+
+pypi-release: commit-v pypi-package tag ##@Repo perform several actions for PyPI package release and repo update
+	 
+incr-version:  ##@Repo increases the minor version in version.txt file
+	bash increase-version.sh

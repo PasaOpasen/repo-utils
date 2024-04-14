@@ -15,8 +15,9 @@ PYTHON=$(bash get-python.sh)
 
 pypi_creds=${1:-../pypi.sh}
 
-if [ -f "${pypy_creds}" ]
+if [ -f "${pypi_creds}" ]
 then 
+    echo "read creadentials from ${pypi_creds}"
     source ${pypi_creds}
 fi
 

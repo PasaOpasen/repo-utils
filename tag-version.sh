@@ -17,5 +17,5 @@ then
 fi
 
 git tag $tag
-git push $tag
+git push origin $tag
 
