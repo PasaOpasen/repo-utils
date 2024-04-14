@@ -1,7 +1,9 @@
 
 set -e
 
-source get-python.sh
+PYTHON=$(bash get-python.sh)
+
+cd ../
 
 if [ ! -f setup.py ]
 then

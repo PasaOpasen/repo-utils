@@ -11,9 +11,9 @@
 
 set -e
 
-pypi_creds=${1:-../pypi.sh}
+PYTHON=$(bash get-python.sh)
 
-source get-python.sh
+pypi_creds=${1:-../pypi.sh}
 
 if [ -f "${pypy_creds}" ]
 then 
@@ -22,6 +22,8 @@ fi
 
 U=${PYPI_USERNAME}
 P=${PYPI_PASSWORD}
+
+cd ../
 
 if [ -n "$U" ] && [ -n "$P" ]
 then 

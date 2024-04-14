@@ -4,6 +4,7 @@
 # exites with error if cannot found
 #
 
+
 cd ../
 
 PYTHON=""
@@ -11,17 +12,22 @@ for python in "venv/bin/python" ".venv/bin/python" "python"
 do
     if [ -x "$(command -v ${python})" ]
     then
-        echo -e "Use python: $(which $python)"
+        # echo -e "Use python: $(which $python)"
         PYTHON=${python}
         break
     else
-        echo "Not found python from ${python}"
+        # echo "Not found python from ${python}"
+        x=1
     fi
-done
+done  
+
 
 if [ -z $PYTHON ]
 then
     echo "Python interpreter not found!"
     exit 1
 fi
+
+
+echo -n $(realpath $(which $PYTHON))
 
