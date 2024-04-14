@@ -19,7 +19,7 @@ wheel-push:   ##@PyPI push local wheel
 pypi-package: wheel wheel-push  ##@PyPI wheel build + push
 
 tag:          ##@Repo create and push tag from version.txt
-	bash tag.sh
+	bash tag-version.sh
 
 pypi-release: ##@Repo perform several actions for PyPI package release and repo update
 	bash increase-version.sh 

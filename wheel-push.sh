@@ -1,7 +1,7 @@
 #
-# pushes to pypi with credentials reading
+# pushes the wheel to pypi with credentials reading
 #
-# credentials are file usually called pypi.sh (in the parent directory) with next variables:
+# credentials is the file usually called pypi.sh (in the parent directory) with next variables:
 #   PYPI_USERNAME=__token__
 #   PYPI_PASSWORD=pypi-AgEIcHlwaS5vcmcCJG...
 #
