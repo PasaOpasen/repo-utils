@@ -28,9 +28,9 @@ cd ../
 
 if [ -n "$U" ] && [ -n "$P" ]
 then 
-    $PYTHON -m twine upload -u $U -p $P dist/* --skip-existing
+    $PYTHON -m twine upload -u $U -p $P dist/*.whl --skip-existing
 else
     echo "credentials not found"
-    $PYTHON -m twine upload dist/* --skip-existing
+    $PYTHON -m twine upload dist/*.whl --skip-existing
 fi
 
